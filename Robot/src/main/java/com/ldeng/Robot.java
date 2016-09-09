@@ -24,6 +24,46 @@ public class Robot {
         this.commandList = new ArrayList<>();
     }
 
+    public Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public Location<Integer, Integer> getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location<Integer, Integer> location) {
+        this.location = location;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public List<Command> getCommandList() {
+        return commandList;
+    }
+
+    public void setCommandList(List<Command> commandList) {
+        this.commandList = commandList;
+    }
+
     public void turnLeft() {
         switch (direction) {
             case FORWARD: direction = Direction.LEFT; break;
@@ -49,10 +89,6 @@ public class Robot {
             case RIGHT: location.setLocation(++x, y); break;
             case BACKWARD: location.setLocation(x, --y); break;
         }
-    }
-
-    public String getCurrentLocation() {
-        return location.toString();
     }
 
     public List<Command> commandParser(String commands) {

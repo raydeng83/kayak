@@ -3,10 +3,13 @@ package com.ldeng;
 /**
  * Created by Le on 9/7/2016 0007.
  */
+
 public class Location<X, Y> {
 
     private X x;
     private Y y;
+
+    public Location() {}
 
     public Location(X x, Y y) {
         this.x = x;
