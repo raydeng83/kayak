@@ -6,6 +6,8 @@ import spock.lang.Specification
 
 /**
  * Created by Le on 9/8/2016 0008.
+ *
+ * Unit test for Robot class
  */
 class RobotSpec extends Specification {
 

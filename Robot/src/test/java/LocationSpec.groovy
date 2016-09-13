@@ -3,10 +3,12 @@ import spock.lang.Specification
 
 /**
  * Created by Le on 9/8/2016 0008.
+ *
+ * Unit test for Location class
  */
 class LocationSpec extends Specification{
 
-    def "set location"() {
+    def "can set location"() {
         given:
             Location<Integer, Integer> location = new Location();
 

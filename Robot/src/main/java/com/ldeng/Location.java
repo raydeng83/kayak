@@ -2,6 +2,8 @@ package com.ldeng;
 
 /**
  * Created by Le on 9/7/2016 0007.
+ *
+ * An abstraction layer to deal with locations of Robot. Scalable to add third dimension.
  */
 
 public class Location<X, Y> {

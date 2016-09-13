@@ -8,6 +8,14 @@ import java.util.List;
 
 /**
  * Created by Le on 9/7/2016 0007.
+ *
+ * A robot is abstracted with properties of Location, Direction and CommandList.
+ *
+ * Commands for robot includes TurnLeft, TurnRight and Forward.
+ *
+ * A command parser is used to parse the incoming command sequence.
+ *
+ * The execution method is called to execute the command sequence.
  */
 public class Robot {
     private Location<Integer, Integer> location;
@@ -16,6 +24,7 @@ public class Robot {
     private int x;
     private int y;
 
+    //Constructor to initialize the Robot; the assumed starting location is [0,0]
     public Robot() {
         this.x=0;
         this.y=0;
@@ -64,6 +73,11 @@ public class Robot {
         this.commandList = commandList;
     }
 
+
+
+    /**
+     * Commands defined
+     */
     public void turnLeft() {
         switch (direction) {
             case FORWARD: direction = Direction.LEFT; break;
@@ -91,6 +105,10 @@ public class Robot {
         }
     }
 
+
+    /**
+     * Command Parser
+     */
     public List<Command> commandParser(String commands) {
         for (char c : commands.toCharArray()) {
             switch (c) {
@@ -103,6 +121,9 @@ public class Robot {
         return commandList;
     }
 
+    /**
+     * To execute command sequence after they have been parsed
+     */
     public void execute () {
         for (Command command : commandList) {
             switch (command) {
